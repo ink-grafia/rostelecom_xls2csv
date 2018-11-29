@@ -8,6 +8,8 @@ def convert_to_csv(file):
     df = df[0]
 
     df = df.iloc[6:-1,1:-1]
+    df[6] = df[6].astype('int64')
+    df[8] = df[8].astype('float64')/100
 
     info1 = df.iloc[1,1]
     info2 = df.iloc[2,1]
